@@ -42,7 +42,7 @@ public class BaseTest {
 			prop.getProperty("browser");
 		
 		if (browserName.contains("chrome")) {
-			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().clearDriverCache().setup();
 			ChromeOptions option = new ChromeOptions();
 			option.addArguments("-remote-allow-origins=*");
 			if (browserName.contains("headless")) {
